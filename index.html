@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ear Trainer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Ear Trainer</h1>
+      <p class="subtitle">Train your ears to recognize notes and chords.</p>
+    </header>
+
+    <nav class="modes" id="modes">
+      <button class="mode-btn active" data-mode="notes" type="button">Note Identification</button>
+      <button class="mode-btn" data-mode="chords" type="button" disabled title="Coming soon">Chord Identification</button>
+    </nav>
+
+    <main class="card" id="game">
+      <div class="prompt">
+        <h2 id="question">Which note do you hear?</h2>
+        <div class="controls">
+          <button id="playBtn" class="play-btn" type="button" aria-label="Play note">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M8 5v14l11-7z" fill="currentColor" />
+            </svg>
+            <span>Play note</span>
+          </button>
+          <button id="replayBtn" class="ghost-btn" type="button">Replay</button>
+        </div>
+        <p class="kbd-hint">
+          Keyboard: <kbd>1</kbd>–<kbd>4</kbd> choose &middot;
+          <kbd>Space</kbd> replay &middot; <kbd>Enter</kbd> next
+        </p>
+      </div>
+
+      <div class="options" id="options" role="group" aria-label="Answer choices"></div>
+
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+
+      <div class="footer-bar">
+        <div class="score" id="score">Score: 0 / 0</div>
+        <button id="nextBtn" class="next-btn" type="button" disabled>Next</button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <a href="https://github.com/barakh/EarTrainer" target="_blank" rel="noopener">View on GitHub</a>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
