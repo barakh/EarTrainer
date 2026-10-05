@@ -19,6 +19,17 @@
     </nav>
 
     <main class="card" id="game">
+      <div class="level-bar">
+        <div class="level-select" id="levelSelect" role="group" aria-label="Choose level"></div>
+        <div class="level-info">
+          <span class="level-label" id="levelLabel">Level 1 · C · D · E · F</span>
+          <span class="level-progress-text" id="levelProgressText">0 / 8</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="levelProgressFill"></div>
+        </div>
+      </div>
+
       <div class="prompt">
         <h2 id="question">Which note do you hear?</h2>
         <div class="controls">
@@ -42,7 +53,10 @@
 
       <div class="footer-bar">
         <div class="score" id="score">Score: 0 / 0</div>
-        <button id="nextBtn" class="next-btn" type="button" disabled>Next</button>
+        <div class="footer-actions">
+          <button id="resetBtn" class="ghost-btn small" type="button">Reset progress</button>
+          <button id="nextBtn" class="next-btn" type="button" disabled>Next</button>
+        </div>
       </div>
     </main>
 
